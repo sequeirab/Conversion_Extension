@@ -2,5 +2,17 @@
     "name": "Conversion",
     "manifest_version": 3,
     "version": "1.0",
-    "description": "Convert multiple measures"
+    "description": "Convert multiple measures",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }, 
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-script.js"]
+        }
+    ]
 }
